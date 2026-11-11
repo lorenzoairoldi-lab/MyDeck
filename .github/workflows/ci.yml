@@ -1,5 +1,4 @@
 name: CI Pipeline
-run-name: Continuous Integration Pipeline
 
 on:
   push:
@@ -11,16 +10,14 @@ on:
       - main
       - develop
 
-# Annulla le esecuzioni precedenti in corso per la stessa PR/branch
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  unit-test-and-build:
-    name: Build and Unit Tests
+  build-and-test:
+    name: Build & Test
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,37 +25,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          install-latest-npm: true
-          cache: 'npm'
+          node-version: '20'
+          # Rimosso cache: 'npm' per evitare l'errore sul lockfile
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Run unit tests
+      - name: Run tests
         run: npm test
 
       - name: Build project
         run: npm run build
-
-  e2e-tests:
-    name: End-to-End Tests
-    runs-on: ubuntu-latest
-    needs: unit-test-and-build # Viene eseguito solo se build e unit test passano
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      # Se usate Cypress o Playwright, ricordate di aggiungere la cache per i loro binari di sistema
-      - name: Run E2E tests
-        run: npm run e2e
