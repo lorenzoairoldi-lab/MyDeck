@@ -1,4 +1,5 @@
 name: CI Pipeline
+run-name: CI Pipeline 
 
 on:
   push:
@@ -26,7 +27,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          # Rimosso cache: 'npm' per evitare l'errore sul lockfile
 
       - name: Install dependencies
         run: npm install
