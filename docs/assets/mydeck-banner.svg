@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title description">
+  <title id="title">MyDeck — Il tuo Linux. A colpo d’occhio.</title>
+  <desc id="description">Banner MyDeck con un monitor stilizzato, una curva ciano e accenti viola, verdi e ambra su fondo blu notte.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#101e30"/>
+      <stop offset="1" stop-color="#080e17"/>
+    </linearGradient>
+    <linearGradient id="accent">
+      <stop stop-color="#25c7f5"/>
+      <stop offset=".4" stop-color="#a933ef"/>
+      <stop offset=".72" stop-color="#35de68"/>
+      <stop offset="1" stop-color="#e6ad45"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#344ba4" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#344ba4" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#8dadd0" stroke-opacity=".045"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="300" rx="22" fill="url(#background)"/>
+  <rect width="1200" height="300" rx="22" fill="url(#grid)"/>
+  <ellipse cx="925" cy="115" rx="330" ry="220" fill="url(#glow)"/>
+  <rect x="1" y="1" width="1198" height="298" rx="21" fill="none" stroke="#26354b"/>
+  <rect x="48" y="62" width="104" height="100" rx="25" fill="#14273c" stroke="#28415d"/>
+  <rect x="68" y="84" width="64" height="45" rx="8" fill="none" stroke="#c4eafa" stroke-width="2.5"/>
+  <path d="M75 110H86L93 96L102 120L110 105H125" fill="none" stroke="#25c7f5" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M100 130V140M87 141H113" fill="none" stroke="#c4eafa" stroke-width="2.5" stroke-linecap="round"/>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+    <text x="181" y="122" fill="#eef5ff" font-size="66" font-weight="750" letter-spacing="-3">MyDeck</text>
+    <text x="184" y="160" fill="#9cadc4" font-size="22">Il tuo Linux. A colpo d’occhio.</text>
+    <text x="51" y="235" fill="#8195b1" font-size="12" font-weight="600" letter-spacing="3">TERMINAL  /  LIVE METRICS  /  OPEN SOURCE</text>
+  </g>
+  <g transform="translate(738 61)">
+    <rect width="410" height="178" rx="15" fill="#0a1422" stroke="#2b3954"/>
+    <path d="M0 37H410" stroke="#25324a"/>
+    <circle cx="19" cy="19" r="4" fill="#25c7f5"/>
+    <circle cx="34" cy="19" r="4" fill="#a933ef"/>
+    <circle cx="49" cy="19" r="4" fill="#35de68"/>
+    <text x="22" y="73" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="17" fill="#e3edf2"><tspan fill="#35de68">$</tspan> mydeck<tspan fill="#25c7f5"> ▏</tspan></text>
+    <path d="M23 140C43 140 44 116 60 122S80 148 96 127S111 140 126 106S145 145 163 119S182 134 202 94S223 128 245 108S264 119 285 90S306 113 326 79S348 94 371 64" fill="none" stroke="#25c7f5" stroke-opacity=".12" stroke-width="12" stroke-linecap="round"/>
+    <path d="M23 140C43 140 44 116 60 122S80 148 96 127S111 140 126 106S145 145 163 119S182 134 202 94S223 128 245 108S264 119 285 90S306 113 326 79S348 94 371 64" fill="none" stroke="#25c7f5" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="371" cy="64" r="4" fill="#b5efff"/>
+  </g>
+  <rect x="48" y="277" width="1104" height="2" rx="1" fill="url(#accent)"/>
+</svg>

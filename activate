@@ -1,0 +1,4 @@
+# Run: source ./activate
+_mydeck_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+export PATH="$_mydeck_root/bin:$PATH"
+unset _mydeck_root
