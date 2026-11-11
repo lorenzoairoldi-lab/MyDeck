@@ -18,7 +18,7 @@ concurrency:
 # Forza GitHub Actions ad eseguire tutti i comandi dentro la sottocartella MyDeck
 defaults:
   run:
-    working-directory: MyDeck
+    working-directory: .
 
 jobs:
   build-and-test:
