@@ -1,4 +1,5 @@
 name: CI Pipeline
+run-name: Continuous Integration Pipeline
 
 on:
   push:
