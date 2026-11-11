@@ -1,5 +1,5 @@
 name: CI Pipeline
-run-name: CI Pipeline 
+run-name: CI Pipeline
 
 on:
   push:
@@ -14,6 +14,11 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+
+# Forza GitHub Actions ad eseguire tutti i comandi dentro la sottocartella MyDeck
+defaults:
+  run:
+    working-directory: MyDeck
 
 jobs:
   build-and-test:
